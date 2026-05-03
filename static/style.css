@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at 20% 20%, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveStars 100s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes moveStars {
+    from { transform: translate(0,0); }
+    to { transform: translate(-500px, -500px); }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    border: none;
+    box-shadow: 0 0 10px #00f2fe;
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+    border: none;
+}
+
+input {
+    background: rgba(255,255,255,0.1) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+a {
+    color: #00f2fe !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px #00f2fe;
+}
